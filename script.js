@@ -13,14 +13,24 @@ document.querySelectorAll('a[href^="#"]').forEach((link) => {
 });
 
 // Toggle navbar for mobile (optional if you add hamburger)
-const menuToggle = document.getElementById("menu-toggle");
-const navLinks = document.getElementById("nav-links");
+document.addEventListener("DOMContentLoaded", function () {
+  const toggleBtn = document.getElementById("menu-toggle");
+  const navLinks = document.getElementById("nav-links");
 
-if (menuToggle && navLinks) {
-  menuToggle.addEventListener("click", () => {
-    navLinks.classList.toggle("active");
+  toggleBtn.addEventListener("click", () => {
+    navLinks.classList.toggle("show");
+    toggleBtn.classList.toggle("active");
   });
-}
+
+  // Tutup menu saat salah satu link diklik (opsional)
+  const links = navLinks.querySelectorAll("a, button");
+  links.forEach((link) => {
+    link.addEventListener("click", () => {
+      navLinks.classList.remove("show");
+      toggleBtn.classList.remove("active");
+    });
+  });
+});
 
 // Replace placeholders for dynamic avatars or ratings (if needed)
 document.querySelectorAll(".avatar").forEach((el, index) => {

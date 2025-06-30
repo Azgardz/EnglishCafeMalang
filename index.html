@@ -9,24 +9,32 @@
   </head>
   <body class="bg-gradient-to-b from-blue-50 to-white">
     <!-- === Navbar === -->
-    <nav class="bg-white shadow-sm sticky top-0 z-50">
-      <div class="container">
-        <div class="nav-wrapper">
-          <div class="logo">
-            <img src="book-icon.svg" alt="Logo" class="icon" />
-            <span class="brand"
-              >English<span class="highlight">CafeMalang</span></span
-            >
-          </div>
-          <ul class="nav-links">
-            <li><a href="#courses">Kursus</a></li>
-            <li><a href="#about">Tentang</a></li>
-            <li><a href="#testimonials">Testimoni</a></li>
-            <li><a href="#contact">Kontak</a></li>
-            <li><button class="btn-outline">Masuk</button></li>
-            <li><button class="btn">Daftar Gratis</button></li>
-          </ul>
+    <nav class="navbar">
+      <div class="container nav-wrapper">
+        <!-- Logo -->
+        <div class="logo">
+          <img src="book-icon.svg" alt="Logo" class="icon" />
+          <span class="brand"
+            >English<span class="highlight">CafeMalang</span></span
+          >
         </div>
+
+        <!-- Hamburger Menu Button -->
+        <button class="menu-toggle" id="menu-toggle">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+
+        <!-- Navigation Links -->
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#courses">Kursus</a></li>
+          <li><a href="#about">Tentang</a></li>
+          <li><a href="#testimonials">Testimoni</a></li>
+          <li><a href="#contact">Kontak</a></li>
+          <li><button class="btn-outline">Masuk</button></li>
+          <li><button class="btn">Daftar Gratis</button></li>
+        </ul>
       </div>
     </nav>
 
